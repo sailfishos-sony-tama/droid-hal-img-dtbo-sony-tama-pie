@@ -18,6 +18,8 @@ Source0:    dtbo.img
 BuildRequires:  droid-hal-%{device}-kernel
 BuildRequires:  droid-hal-%{device}-kernel-modules
 
+Requires:   droid-hal-%{device}-img-boot = %{version}-%{release}
+
 %description
 %{summary}
 
