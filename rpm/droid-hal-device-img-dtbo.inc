@@ -13,7 +13,7 @@ Version:    %{localver}
 Release:    1
 Group:      Kernel/Linux Kernel
 License:    GPLv2
-Source0:    dtbo.img
+Source0:    dtbo-%{device}.img
 
 BuildRequires:  droid-hal-%{device}-kernel
 BuildRequires:  droid-hal-%{device}-kernel-modules
@@ -30,7 +30,7 @@ ls -lh
 %install
 
 mkdir -p $RPM_BUILD_ROOT/boot
-cp dtbo.img $RPM_BUILD_ROOT/boot/dtbo.img
+cp dtbo-%{device}.img $RPM_BUILD_ROOT/boot/dtbo.img
 
 %files
 %defattr(-,root,root,-)
