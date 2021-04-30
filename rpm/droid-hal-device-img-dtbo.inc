@@ -8,6 +8,10 @@
 %define localver %(echo "%{kernelver}" | cut -d '-' -f1 | cut -d '+' -f1)
 %define rel_date %(date +'%%Y%%m%%d%%H%%M')
 
+%if "%{localver}" == ""
+%define localver 0.0.1
+%endif
+
 Name:       droid-hal-%{device}-img-dtbo
 Summary:    Device tree overlays image for %{device}
 Version:    %{localver}
